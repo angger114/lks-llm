@@ -9,7 +9,7 @@ import {
 } from "@aws-sdk/client-cognito-identity-provider";
 
 const cognitoClient = new CognitoIdentityProviderClient({
-   region: process.env.AWS_REGION || "us-east-1",
+   region: process.env.NEXT_PUBLIC_AWS_REGION || "us-east-1",
 });
 
 interface RefreshTokenResult {
