@@ -101,7 +101,7 @@ export const refreshAccessToken = async (
 export const forgotPassword = async (username: string): Promise<any> => {
    try {
       const command = new ForgotPasswordCommand({
-         ClientId: process.env.NET_PUBLIC_COGNITO_CLIENT_ID,
+         ClientId: process.env.NEXT_PUBLIC_COGNITO_CLIENT_ID,
          Username: username,
       });
 
