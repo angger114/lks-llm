@@ -2,25 +2,29 @@ import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 const handler = NextAuth({
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: "testsecret",
 
   providers: [
     CredentialsProvider({
       name: "credentials",
       credentials: {
-        email: {},
-        password: {},
+        username: { label: "Username", type: "text" },
+        password: { label: "Password", type: "password" },
       },
 
-      async authorize() {
+      async authorize(credentials) {
         return {
           id: "1",
-          name: "test",
+          name: "Test User",
           email: "test@test.com",
         };
       },
     }),
   ],
+
+  pages: {
+    signIn: "/signin",
+  },
 });
 
 export { handler as GET, handler as POST };
