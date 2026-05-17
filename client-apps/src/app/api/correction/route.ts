@@ -59,7 +59,7 @@ const fixJsonResponse = (jsonString: string): string => {
 
 export async function POST(req: Request) {
    //const session = await auth();
-   const token = session?.user?.idToken
+   const token = null; //session?.user?.idToken
 
    const { input, region }: { input: string; region: string } =
       await req.json();

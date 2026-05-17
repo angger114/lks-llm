@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   // const session = await auth();
-   const token = session?.user?.idToken
+   const token = null; //session?.user?.idToken
 
    const {
       messages,

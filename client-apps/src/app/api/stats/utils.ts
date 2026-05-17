@@ -44,7 +44,7 @@ export const getEmbedding = async (
    model: string
 ): Promise<number[]> => {
    //const session = await auth();
-   const token = session?.user?.idToken
+   const token = null; //session?.user?.idToken
 
    const url = getOllamaUrl("embeddings", region);
    const response = await fetch(url, {
@@ -67,7 +67,7 @@ export const llmQuery = async (
    model: string
 ): Promise<string> => {
   // const session = await auth();
-   const token = session?.user?.idToken
+   const token = null; //session?.user?.idToken
 
    const url = getOllamaUrl("generate", region);
    const response = await fetch(url, {
