@@ -2,7 +2,6 @@ export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { auth } from "@/auth";
 
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const CORRECTION_TEMPLATE = `

@@ -1,5 +1,5 @@
 "use client";
-
+export const runtime = "nodejs";
 import { useSession } from "next-auth/react";
 import ApiStatus from "@/components/check/api-status";
 import UserInfo from "@/components/check/user-info";

@@ -5,7 +5,6 @@ import { formatConversation, ASPECT_REFERENCES } from './utils';
 import { scoringWithPrompt } from './scoring';
 import { auth } from "@/auth";
 
-export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export async function POST(req: NextRequest) {

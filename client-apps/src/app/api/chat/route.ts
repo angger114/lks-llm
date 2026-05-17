@@ -1,4 +1,3 @@
-export const runtime = "nodejs";
 import {
    LangChainAdapter,
    Message as VercelChatMessage,
@@ -6,7 +5,7 @@ import {
 } from "ai";
 import { auth } from "@/auth";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
