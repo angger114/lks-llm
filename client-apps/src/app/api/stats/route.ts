@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { VercelChatMessage, ScoringReult, AspectScore } from './types';
 import { formatConversation, ASPECT_REFERENCES } from './utils';
 import { scoringWithPrompt } from './scoring';
-import { auth } from "@/auth";
+//import { auth } from "@/auth";
 
 export const dynamic = "force-dynamic";
 

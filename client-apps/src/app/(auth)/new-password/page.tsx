@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signIn } from "@/auth";
+import { signIn } from "next-auth/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

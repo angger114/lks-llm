@@ -1,5 +1,5 @@
 export const runtime = "nodejs";
-import { auth } from "@/auth";
+//import { auth } from "@/auth";
 import type { AssessmentScores, VercelChatMessage } from "./types";
 
 const getOllamaUrl = (endpoint: string, region: string): string => {
@@ -43,7 +43,7 @@ export const getEmbedding = async (
    region: string,
    model: string
 ): Promise<number[]> => {
-   const session = await auth();
+   //const session = await auth();
    const token = session?.user?.idToken
 
    const url = getOllamaUrl("embeddings", region);
@@ -66,7 +66,7 @@ export const llmQuery = async (
    region: string,
    model: string
 ): Promise<string> => {
-   const session = await auth();
+  // const session = await auth();
    const token = session?.user?.idToken
 
    const url = getOllamaUrl("generate", region);

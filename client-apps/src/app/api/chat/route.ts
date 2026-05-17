@@ -3,13 +3,13 @@ import {
    Message as VercelChatMessage,
    StreamingTextResponse,
 } from "ai";
-import { auth } from "@/auth";
+//import { auth } from "@/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
-   const session = await auth();
+  // const session = await auth();
    const token = session?.user?.idToken
 
    const {
