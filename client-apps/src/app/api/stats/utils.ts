@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { auth } from "@/auth";
 import type { AssessmentScores, VercelChatMessage } from "./types";
 

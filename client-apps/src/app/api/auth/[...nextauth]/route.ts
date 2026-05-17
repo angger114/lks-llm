@@ -1,1 +1,5 @@
-export { GET, POST } from "@/auth";
+export const runtime = "nodejs";
+
+import auth from "@/auth";
+
+export { auth as GET, auth as POST };

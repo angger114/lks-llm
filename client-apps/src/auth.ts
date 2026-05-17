@@ -1,12 +1,11 @@
 import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 
-export const { handlers, signIn, signOut, auth } = NextAuth({
+const handler = NextAuth({
   secret: process.env.AUTH_SECRET,
-  trustHost: true,
 
   providers: [
-    Credentials({
+    CredentialsProvider({
       name: "credentials",
 
       credentials: {
@@ -14,7 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: {},
       },
 
-      async authorize(credentials) {
+      async authorize() {
         return {
           id: "1",
           name: "test",
@@ -24,3 +23,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
 });
+
+export default handler;

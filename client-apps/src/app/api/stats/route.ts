@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { NextRequest, NextResponse } from 'next/server';
 import { VercelChatMessage, ScoringReult, AspectScore } from './types';
 import { formatConversation, ASPECT_REFERENCES } from './utils';
